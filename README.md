@@ -12,9 +12,13 @@ This project reflects real-world data engineering workflows used in analytics, c
 The goal of this project is to:
 
 ✔ Design a scalable ETL pipeline using AWS
+
 ✔ Model data using a star schema
+
 ✔ Generate analytics-ready tables
+
 ✔ Calculate business KPIs for decision support
+
 ✔ Enable BI visualization using cloud tools
 
 **🏗 Architecture**
@@ -73,14 +77,23 @@ Run the SQL in sql/ to build analytics and KPI layers
 This project calculates key business metrics including:
 
 ✔ Total trips
+
 ✔ Total revenue
+
 ✔ Average fare per trip
+
 ✔ Revenue per trip
+
 ✔ Trips by payment type
+
 ✔ Peak hours
+
 ✔ Daily trip trends
+
 ✔ Average tip percentage
+
 ✔ Revenue by passenger count
+
 
 These KPIs are defined in the sql/kpi_queries.sql file.
 
