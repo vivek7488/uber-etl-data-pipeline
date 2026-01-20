@@ -1,12 +1,13 @@
-🚕 Uber ETL Pipeline – AWS Data Engineering Project
-🧠 Introduction
+**🚕 Uber ETL Pipeline – AWS Data Engineering Project**
+
+**🧠 Introduction**
 
 This repository demonstrates an end-to-end ETL pipeline built for Uber trip data using AWS services.
 It ingests raw data, transforms it into analytics-ready models, and generates key business insights through KPI queries.
 
 This project reflects real-world data engineering workflows used in analytics, cloud data platforms, and BI.
 
-📌 Project Overview
+**📌 Project Overview**
 
 The goal of this project is to:
 
@@ -16,21 +17,21 @@ The goal of this project is to:
 ✔ Calculate business KPIs for decision support
 ✔ Enable BI visualization using cloud tools
 
-🏗 Architecture
+**🏗 Architecture**
 
 Below is the ETL flow used in this project:
 
 Flow Details:
 
-Extract raw Uber CSV data
+    Extract raw Uber CSV data
 
-Transform & model data into fact and dimension tables
+    Transform & model data into fact and dimension tables
 
-Load to cloud data warehouse (Redshift / Athena)
+    Load to cloud data warehouse (Redshift / Athena)
 
-Create analytics and KPI layers for reporting
+    Create analytics and KPI layers for reporting
 
-📁 Project Structure
+**📁 Project Structure**
 
     uber-etl-pipeline/
      ├── assets/
@@ -45,26 +46,27 @@ Create analytics and KPI layers for reporting
      ├── README.md
 
 
-🛠 Usage
+**🛠 Usage**
+
 1. Clone the repository
-git clone https://github.com/your-username/uber-etl-pipeline.git
-cd uber-etl-pipeline
+        git clone https://github.com/your-username/uber-etl-pipeline.git
+        cd uber-etl-pipeline
 
 2. AWS Setup
 
-Create an Amazon S3 bucket
+    Create an Amazon S3 bucket
 
-Configure Redshift or Athena
+    Configure Redshift or Athena
 
-Upload uber_trips.csv to S3
+    Upload uber_trips.csv to S3
 
 3. Run ETL
 
-Run Python ETL scripts or Jupyter notebooks to build fact and dimension tables
+   Run Python Jupyter notebooks to build fact and dimension tables
 
 Run the SQL in sql/ to build analytics and KPI layers
 
-📊 KPIs & Metrics
+**📊 KPIs & Metrics**
 
 This project calculates key business metrics including:
 
@@ -80,17 +82,17 @@ This project calculates key business metrics including:
 
 These KPIs are defined in the sql/kpi_queries.sql file.
 
-⚙️ AWS Components Used
+**⚙️ AWS Components Used**
 
-Amazon S3 — Data lake for raw CSV
+  Amazon S3 — Data lake for raw CSV
 
-Amazon Redshift / Athena — Cloud analytics engine
+  Amazon Athena — Cloud analytics engine
 
-SQL — Analytics & KPI computation
+  SQL — Analytics & KPI computation
 
-BI Tools — QuickSight / Looker Studio (optional)
+  BI Tools — QuickSight
 
-📌 Installation & Prerequisites
+**📌 Installation & Prerequisites**
 
 To run this project locally you need:
 
@@ -101,9 +103,9 @@ To run this project locally you need:
 
 Install dependencies:
 
-pip install -r requirements.txt
+   pip install -r requirements.txt
 
-🤝 Contributing
+**🤝 Contributing**
 
 Contributions are welcome! To contribute:
 
