@@ -49,10 +49,12 @@ Flow Details:
 **🛠 Usage**
 
 1. Clone the repository
+   
         git clone https://github.com/your-username/uber-etl-pipeline.git
+   
         cd uber-etl-pipeline
 
-2. AWS Setup
+3. AWS Setup
 
     Create an Amazon S3 bucket
 
@@ -60,7 +62,7 @@ Flow Details:
 
     Upload uber_trips.csv to S3
 
-3. Run ETL
+4. Run ETL
 
    Run Python Jupyter notebooks to build fact and dimension tables
 
