@@ -1,176 +1,111 @@
-🚕 Uber ETL Pipeline – End-to-End Data Engineering Project (AWS)
+🚕 Uber ETL Pipeline – AWS Data Engineering Project
+🧠 Introduction
+
+This repository demonstrates an end-to-end ETL pipeline built for Uber trip data using AWS services.
+It ingests raw data, transforms it into analytics-ready models, and generates key business insights through KPI queries.
+
+This project reflects real-world data engineering workflows used in analytics, cloud data platforms, and BI.
+
 📌 Project Overview
 
-This project demonstrates an end-to-end data engineering pipeline built using Uber trip data.
-The pipeline ingests raw trip data, performs transformations using a star schema, stores analytics-ready data in a cloud data warehouse, and enables business insights through KPI queries and dashboards.
+The goal of this project is to:
 
-The project emphasizes ETL design, data modeling, cloud architecture, and analytics enablement.
+✔ Design a scalable ETL pipeline using AWS
+✔ Model data using a star schema
+✔ Generate analytics-ready tables
+✔ Calculate business KPIs for decision support
+✔ Enable BI visualization using cloud tools
 
-🏗 ETL Pipeline Architecture
+🏗 Architecture
 
-High-level flow:
+Below is the ETL flow used in this project:
 
-Raw CSV Data → Python ETL → Amazon S3 → Data Warehouse → Analytics & KPIs
+Flow Details:
 
-🛠 Tech Stack
+Extract raw Uber CSV data
 
-Programming Language: Python
+Transform & model data into fact and dimension tables
 
-Cloud Platform: Amazon Web Services (AWS)
+Load to cloud data warehouse (Redshift / Athena)
 
-Amazon S3 (Data Lake)
+Create analytics and KPI layers for reporting
 
-Amazon Redshift / Amazon Athena (Analytics)
-
-Data Modeling: Star Schema
-
-Analytics: SQL
-
-Visualization: Amazon QuickSight / Looker Studio
-
-Version Control: Git & GitHub
-
-📂 Project Structure
+📁 Project Structure
 uber-etl-pipeline/
-│
 ├── assets/
 │   └── uber_etl_pipeline.png
-│
 ├── data/
 │   └── uber_trips.csv
-│
 ├── sql/
 │   ├── analytics_table.sql
 │   └── kpi_queries.sql
-│
 ├── notebooks/
 │   └── etl_transformation.ipynb
-│
 ├── scripts/
 │   └── etl_pipeline.py
-│
-└── README.md
+├── README.md
 
-📊 Data Model
-
-The project follows a star schema optimized for analytical queries.
-
-Fact Table
-
-fact_table
-
-trip_id
-
-vendor_id
-
-datetime_id
-
-passenger_count_id
-
-trip_distance_id
-
-rate_code_id
-
-pickup_location_id
-
-dropoff_location_id
-
-payment_type_id
-
-fare and revenue metrics
-
-Dimension Tables
-
-datetime_dim
-
-passenger_count_dim
-
-trip_distance_dim
-
-rate_code_dim
-
-pickup_location_dim
-
-dropoff_location_dim
-
-payment_type_dim
-
-⚙️ ETL Pipeline Details
-1️⃣ Extract
-
-Raw Uber trip data ingested from CSV files.
-
-2️⃣ Transform
-
-Data cleaning and normalization
-
-Type casting and validation
-
-Star schema modeling (fact & dimensions)
-
-Analytics table creation using SQL joins
-
-3️⃣ Load
-
-Raw data stored in Amazon S3
-
-Transformed data loaded into Redshift / Athena
-
-Analytics-ready tables created for BI usage
-
-📈 Analytics Layer
-
-An analytics table (tbl_analytics) is created by joining the fact table with all dimension tables.
-
-This table enables:
-
-Fast analytical queries
-
-KPI calculations
-
-Time-based and revenue-based insights
-
-All analytics SQL logic is maintained in the sql/ directory.
-
-📌 Key Business KPIs
-
-The following KPIs are derived from the analytics table:
-
-Total Trips
-
-Total Revenue
-
-Average Fare per Trip
-
-Revenue per Trip
-
-Trips & Revenue by Payment Type
-
-Average Trip Distance
-
-Peak Pickup Hours
-
-Daily Trips & Revenue Trends
-
-Average Tip Percentage
-
-Revenue by Passenger Count
-
-🚀 How to Run the Project
-1️⃣ Clone the Repository
+🛠 Usage
+1. Clone the repository
 git clone https://github.com/your-username/uber-etl-pipeline.git
 cd uber-etl-pipeline
 
-2️⃣ AWS Setup
+2. AWS Setup
 
-Create an Amazon S3 bucket for raw data
+Create an Amazon S3 bucket
 
-Configure Amazon Redshift or Athena
+Configure Redshift or Athena
 
-Upload raw CSV data to S3
+Upload uber_trips.csv to S3
 
-3️⃣ Run ETL
+3. Run ETL
 
-Execute Python scripts or notebooks to generate fact and dimension tables
+Run Python ETL scripts or Jupyter notebooks to build fact and dimension tables
 
-Run SQL scripts from the sql/ folder to create analytics and KPI layers
+Run the SQL in sql/ to build analytics and KPI layers
+
+📊 KPIs & Metrics
+
+This project calculates key business metrics including:
+
+✔ Total trips
+✔ Total revenue
+✔ Average fare per trip
+✔ Revenue per trip
+✔ Trips by payment type
+✔ Peak hours
+✔ Daily trip trends
+✔ Average tip percentage
+✔ Revenue by passenger count
+
+These KPIs are defined in the sql/kpi_queries.sql file.
+
+⚙️ AWS Components Used
+
+Amazon S3 — Data lake for raw CSV
+
+Amazon Redshift / Athena — Cloud analytics engine
+
+SQL — Analytics & KPI computation
+
+BI Tools — QuickSight / Looker Studio (optional)
+
+📌 Installation & Prerequisites
+
+To run this project locally you need:
+
+✔ Python 3.x
+✔ AWS CLI configured
+✔ Boto3 / AWS SDK
+✔ SQL client for Redshift / Athena
+
+Install dependencies:
+
+pip install -r requirements.txt
+
+🤝 Contributing
+
+Contributions are welcome! To contribute:
+
+✔ Fork the repository
+✔ Create a feature branch
