@@ -32,16 +32,18 @@ Create analytics and KPI layers for reporting
 
 📁 Project Structure
 
-uber-etl-pipeline/
+    uber-etl-pipeline/
+     ├── assets/
+     │   └── uber_etl_pipeline.png
+     ├── data/
+     │   └── uber_trips.csv
+     ├── sql/
+     │   ├── analytics_table.sql
+     │   └── kpi_queries.sql
+     ├── notebooks/
+     │   └── etl_transformation.ipynb
+     ├── README.md
 
-    ├── assets/
-    │   └── uber_etl_pipeline.png
-    ├── data/
-    │   └── uber_trips.csv
-    ├── sql/
-    │   ├── analytics_table.sql
-    │   └── kpi_queries.sql
-    ├── README.md
 
 🛠 Usage
 1. Clone the repository
